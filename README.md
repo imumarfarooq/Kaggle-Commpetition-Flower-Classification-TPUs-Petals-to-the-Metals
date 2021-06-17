@@ -9,3 +9,7 @@ To improve classification accuracy of the model on the test dataset, the followi
 4. Regularization techniques
 5. Use of learning rate schedule
 
+### Step 0 : Import Libraries
+
+we begin this notebook by importing useful analytics libraries, in which we import statistical, data visualization and milidating overfitting libraries along with tensorflow and keras.
+
