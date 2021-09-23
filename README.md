@@ -104,3 +104,20 @@ Calculate the Weight of each [Flower Class](https://www.kaggle.com/xuanzhihuang/
 ![](/Images/8.png)
 
 ![](/Images/9.png)
+
+<b> Ensemble Learning Sample Code </b>
+
+![](/Images/10.png)
+
+<b> Model Summary </b>
+model.summary()
+
+![](/Images/11.png)
+
+```
+tf.keras.utils.plot_model(model, show_shapes=True)
+```
+
+![](/Images/12.png)
+
+### Step8: Model Training
