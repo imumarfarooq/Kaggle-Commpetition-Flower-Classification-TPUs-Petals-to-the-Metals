@@ -79,7 +79,7 @@ Image Analysis with or without Augmentation
 
 Now we're ready to create a neural network for classifying images! We'll use what's known as transfer learning. With transfer learning, you reuse part of a pre-trained model to get a head-start on a new dataset.
 
-For this tutorial, we'll use a model called VGG16 pre-trained on [ImageNet](https://image-net.org/)). Later, you might want to experiment with [other models](https://www.tensorflow.org/api_docs/python/tf/keras/applications) included with Keras. ([Xception (https://www.tensorflow.org/api_docs/python/tf/keras/applications/xception/Xception) wouldn't be a bad choice.)
+For this tutorial, we'll use a model called VGG16 pre-trained on [ImageNet](https://image-net.org/)). Later, you might want to experiment with [other models](https://www.tensorflow.org/api_docs/python/tf/keras/applications) included with Keras. [Xception](https://www.tensorflow.org/api_docs/python/tf/keras/applications/xception/Xception) wouldn't be a bad choice.
 
 The distribution strategy we created earlier contains a [context manager](https://docs.python.org/3/reference/compound_stmts.html#with), strategy.scope. This context manager tells TensorFlow how to divide the work of training among the eight TPU cores. When using TensorFlow with a TPU, it's important to define your model in a strategy.scope() context.
 
@@ -87,7 +87,7 @@ The distribution strategy we created earlier contains a [context manager](https:
 
 <b> Important : How to track learning rate during model training? </b>
 
-Note: Stochastic gradient descent is an optimization algorithm that estimates the error gradient for the current state of the model using examples from the training dataset, then updates the weights of the model using the back-propagation of errors algorithm, referred to as simply backpropagation. The amount that the weights are updated during training is referred to as the step size or the “learning rate.” Specifically, the learning rate is a configurable hyperparameter used in the training of neural networks that has a small positive value, often in the range between 0.0 and 1.0. For more information review the article of Jason Brownlee "[How to Configure the Learning Rate When Training Deep Learning Neural Networks]"(https://machinelearningmastery.com/learning-rate-for-deep-learning-neural-networks/)
+Note: Stochastic gradient descent is an optimization algorithm that estimates the error gradient for the current state of the model using examples from the training dataset, then updates the weights of the model using the back-propagation of errors algorithm, referred to as simply backpropagation. The amount that the weights are updated during training is referred to as the step size or the “learning rate.” Specifically, the learning rate is a configurable hyperparameter used in the training of neural networks that has a small positive value, often in the range between 0.0 and 1.0. For more information review the article of Jason Brownlee ["How to Configure the Learning Rate When Training Deep Learning Neural Networks"](https://machinelearningmastery.com/learning-rate-for-deep-learning-neural-networks/)
 
 [Track learning rate during Training NotFoundError](https://stackoverflow.com/questions/49127214/keras-how-to-output-learning-rate-onto-tensorboard): Container worker does not exist. (Could not find resource: worker/_AnonymousVar8064) Encountered when executing an operation using EagerExecutor. This error cancels all future operations and poisons their output tensors.
 
