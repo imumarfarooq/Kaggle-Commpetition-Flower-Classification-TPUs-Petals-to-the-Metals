@@ -53,7 +53,8 @@ TensorFlow Addons is a repository of contributions that conform to well-establis
 ### Step4: Data Pipelines
 ### Step5: Data Exploration
 
-Image Analysis with or without Augmentation
+![Image Analysis with or without Augmentation]
+(https://github.com/imumarfarooq/Kaggle-Commpetition-Flower-Classification-TPUs-Petals-to-the-Metals/blob/main/Images/1.png)
 
 
 
