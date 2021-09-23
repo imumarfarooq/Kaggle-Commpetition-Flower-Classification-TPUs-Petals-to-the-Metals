@@ -40,6 +40,22 @@ TPU's is basically used to allocate the larger models having huge training input
 * num_parallel_reads=AUTO is used to automatically read multiple files.
 * experimental_deterministic = False, we used "experimental_deterministic" to maintain the order of the data. Here, we disable the enforcement order to shuffle the data anyway.
 
+<b> Tuning the Additional [Flower Data](https://www.kaggle.com/kirillblinov/tf-flower-photo-tfrec) </b>
+
+To increase the proficiency of data, I have to use the external flower dataset with the helping material from [Dmitry's](https://www.kaggle.com/dmitrynokhrin/densenet201-aug-additional-data) and [Araik's](https://www.kaggle.com/atamazian/fc-ensemble-external-data-effnet-densenet) notebook. To visit the notebook to a better understanding of the Ensamble learning and augmentation of the external dataset.
+
+<b> Data Augmentation </b>
+
+This tutorial demonstrates data augmentation: a technique to increase the diversity of your training set by applying random (but realistic) transformations such as image rotation. [Read more](https://www.tensorflow.org/tutorials/images/data_augmentation)
+
+TensorFlow Addons is a repository of contributions that conform to well-established API patterns but implement new functionality not available in core TensorFlow. TensorFlow natively supports a large number of operators, layers, metrics, losses, and optimizers. [Readout more](https://github.com/tensorflow/addons)
+
+### Step4: Data Pipelines
+### Step5: Data Exploration
+
+Image Analysis with or without Augmentation
+
+
 
 
 
