@@ -93,5 +93,14 @@ Note: Stochastic gradient descent is an optimization algorithm that estimates th
 
 ![](https://stackoverflow.com/questions/49127214/keras-how-to-output-learning-rate-onto-tensorboard)
 
+![](/Images/6.png)
+
 Tuning Custom [Callbacks](https://www.tensorflow.org/guide/keras/custom_callback)
 
+![](/Images/7.png)
+
+Calculate the Weight of each [Flower Class](https://www.kaggle.com/xuanzhihuang/flower-classification-densenet-201)
+
+![](/Images/8.png)
+
+![](/Images/9.png)
