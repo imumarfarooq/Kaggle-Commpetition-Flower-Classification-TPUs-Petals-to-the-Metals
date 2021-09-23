@@ -53,10 +53,21 @@ TensorFlow Addons is a repository of contributions that conform to well-establis
 ### Step4: Data Pipelines
 ### Step5: Data Exploration
 
-![Image Analysis with or without Augmentation]
-(https://github.com/imumarfarooq/Kaggle-Commpetition-Flower-Classification-TPUs-Petals-to-the-Metals/blob/main/Images/1.png)
+Image Analysis with or without Augmentation
 
+<b> Original versus w/ Random Augmentation </b>
+![](/Images/1.png)
 
+<b> UnBatch the Training Data </b>
+![](/Images/2.png)
 
+### Step6: Data Augmentation Sample
 
+![](/Images/3.png)
+
+### Data Augmentation Sample V2 (Implementing Image Processing)
+![](/Images/4.png)
+
+### Data Augmentation Sample V3 (Implementing Image Processing)
+![](/Images/5.png)
 
