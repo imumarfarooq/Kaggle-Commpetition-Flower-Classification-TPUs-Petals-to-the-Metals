@@ -121,3 +121,55 @@ tf.keras.utils.plot_model(model, show_shapes=True)
 ![](/Images/12.png)
 
 ### Step8: Model Training
+
+```
+if not ensemble_learning_models:
+    history = model.fit(
+        ds_train,
+        validation_data=ds_valid,
+        epochs=EPOCHS,
+        steps_per_epoch=STEPS_PER_EPOCH,
+        callbacks=[lr_callback, checkpoint], # Model weights are saved at the end of every epoch, if it's the best seen so far
+        # https://www.tensorflow.org/tutorials/distribute/multi_worker_with_keras
+        class_weight = weight_per_class #tuning11
+    )
+    
+    
+```
+
+<b> Visualizing Model Performance </b>
+
+Functions used to known the training model performaces:
+
+1. Loss
+2. Metrics
+
+
+```
+if not ensemble_learning_models:
+    display_training_curves_v2( 
+        history.history['loss'],
+        history.history['val_loss'],
+        history.history['lr'],
+        'loss',
+        211,
+    )
+
+    display_training_curves_v2(
+        history.history['sparse_categorical_accuracy'],
+        history.history['val_sparse_categorical_accuracy'],
+        history.history['lr'],
+        'accuracy',
+        212,
+    )
+    
+    
+```
+
+![](/Images/loss_result.png)
+
+<b> Deploy the model on mobile and IOT </b>
+
+To deploy the models into iot and mobile devices, we need to convert the .h5 into Tensorflow lite
+
+![](/Images/iot.png)
