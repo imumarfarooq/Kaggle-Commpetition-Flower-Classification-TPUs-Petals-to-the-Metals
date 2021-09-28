@@ -173,3 +173,38 @@ if not ensemble_learning_models:
 To deploy the models into iot and mobile devices, we need to convert the .h5 into Tensorflow lite
 
 ![](/Images/iot.png)
+
+```
+#if ensemble_learning_models:
+test_ds = get_test_dataset(ordered=True)
+        #best_alpha = 0.35
+print('Computing predictions...')
+test_images_ds = test_ds.map(lambda image, idnum: image)
+probabilities = model.predict(test_images_ds)
+predictions = np.argmax(probabilities, axis=-1)
+print(predictions)
+
+
+print('Generating submission.csv file...')
+        # Get image ids from test set and convert to unicode
+test_ids_ds = test_ds.map(lambda image, idnum: idnum).unbatch()
+test_ids = next(iter(test_ids_ds.batch(NUM_TEST_IMAGES))).numpy().astype('U')
+
+        # Write the submission file
+np.savetxt('submission.csv', np.rec.fromarrays([test_ids, predictions]), fmt=['%s', '%d'], delimiter=',', header='id,label', comments='')
+        # Look at the first few predictions
+        
+```
+![](/Images/result.png)
+
+<b> Submission </b>
+
+```
+ !head submission.csv
+ ```
+
+![](/Images/result1.png)
+
+For further details please review my [Kaggle Notebook](https://www.kaggle.com/imumarfarooq/flower-classification-tpus-petals-to-the-metals) and contact me throught social contacts for discussion. 
+
+<h3> Have a Nice Day! </h3>
